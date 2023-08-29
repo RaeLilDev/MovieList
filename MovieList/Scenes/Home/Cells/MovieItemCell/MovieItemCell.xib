@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="MovieItemCell" customModule="MovieList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="421" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-zn-Io9">
+                        <rect key="frame" x="20" y="10" width="381" height="160"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLG-Yq-gXL">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="160"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_avengers" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-WD-yvI">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="160"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uxb-WD-yvI" secondAttribute="bottom" id="9ht-Jx-3Ws"/>
+                                    <constraint firstItem="uxb-WD-yvI" firstAttribute="leading" secondItem="JLG-Yq-gXL" secondAttribute="leading" id="Lkw-bb-BQD"/>
+                                    <constraint firstAttribute="trailing" secondItem="uxb-WD-yvI" secondAttribute="trailing" id="PNm-cW-lyY"/>
+                                    <constraint firstAttribute="height" constant="160" id="PTe-VQ-rCr"/>
+                                    <constraint firstItem="uxb-WD-yvI" firstAttribute="top" secondItem="JLG-Yq-gXL" secondAttribute="top" id="dKD-fy-sNy"/>
+                                    <constraint firstAttribute="width" constant="90" id="swP-5V-anC"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zjb-8I-2Qr">
+                                <rect key="frame" x="106" y="15.333333333333329" width="275" height="129.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSO-Gw-fby">
+                                        <rect key="frame" x="0.0" y="8.0000000000000036" width="275" height="23.999999999999996"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Duration - Genre Duration - Genre Duration - Genre Duration - Genre Duration - Genre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcU-cF-ROm">
+                                        <rect key="frame" x="0.0" y="48" width="275" height="38.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="ON MY WISHLIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIV-cT-jtY">
+                                        <rect key="frame" x="0.0" y="102.33333333333334" width="275" height="19.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VCJ-zn-Io9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="UTu-gM-0yt"/>
+                    <constraint firstAttribute="trailing" secondItem="VCJ-zn-Io9" secondAttribute="trailing" constant="20" id="g6Q-ww-NTr"/>
+                    <constraint firstItem="VCJ-zn-Io9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="pm2-cW-NdM"/>
+                    <constraint firstAttribute="bottom" secondItem="VCJ-zn-Io9" secondAttribute="bottom" constant="10" id="rf3-ba-8y1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerImage" destination="JLG-Yq-gXL" id="UJn-4x-uW8"/>
+                <outlet property="ivCover" destination="uxb-WD-yvI" id="QXS-Xo-74Q"/>
+                <outlet property="lblDurationGenre" destination="FcU-cF-ROm" id="eP1-Nk-45q"/>
+                <outlet property="lblTitle" destination="LSO-Gw-fby" id="09R-cA-v85"/>
+                <outlet property="lblWishlist" destination="eIV-cT-jtY" id="bbm-w1-7am"/>
+            </connections>
+            <point key="canvasLocation" x="74.045801526717554" y="11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_avengers" width="474" height="700"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
