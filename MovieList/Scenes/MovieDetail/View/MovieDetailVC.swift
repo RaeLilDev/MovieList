@@ -45,7 +45,6 @@ class MovieDetailVC: UIViewController {
         containerCover.layer.cornerRadius = 8.0
         containerCover.dropShadow(opacity: 0.05, radius: 4, width: 0, height: 4)
         viewWatchList.layer.cornerRadius = viewWatchList.bounds.height / 2
-        viewWatchTrailer.layer.cornerRadius = viewWatchTrailer.bounds.height / 2
         viewWatchTrailer.layer.borderColor = UIColor.label.cgColor
         viewWatchTrailer.layer.borderWidth = 1.0
     }
@@ -90,9 +89,11 @@ class MovieDetailVC: UIViewController {
     
     @objc private func onTapWatchTrailer() {
         let trailerLink = viewModel.getTrailerLink()
-        if let url = URL(string: trailerLink) {
-            UIApplication.shared.open(url)
+        if let range = trailerLink.range(of: "http") {
+            let cleanURL = String(trailerLink[range.lowerBound...])
+            UIApplication.shared.open(URL(string: cleanURL)!)
         }
+        
     }
 
 }

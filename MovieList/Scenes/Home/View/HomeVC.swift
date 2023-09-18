@@ -22,7 +22,8 @@ class HomeVC: UIViewController {
         setupNavbar()
         setupTableView()
         viewModel.saveMovieList()
-        viewModel.fetchMovieList(by: "title")
+        let sortByName = Preference.getBool(forKey: .sortByName)
+        viewModel.fetchMovieList(by: sortByName ? "title": "releaseDate")
         bindData()
     }
     
@@ -60,9 +61,11 @@ class HomeVC: UIViewController {
         let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let titleAction = UIAlertAction(title: "Title", style: .default, handler: { _ in
             self.viewModel.fetchMovieList(by: "title")
+            Preference.setValue(true, forKey: .sortByName)
         })
         let releasedDateAction: UIAlertAction = UIAlertAction(title: "Released Date", style: .default, handler: { _ in
             self.viewModel.fetchMovieList(by: "releaseDate")
+            Preference.setValue(false, forKey: .sortByName)
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         

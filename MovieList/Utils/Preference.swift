@@ -8,6 +8,7 @@
 import Foundation
 enum PreferenceKeys: String {
     case isOldUser
+    case sortByName
 }
 
 class Preference {
